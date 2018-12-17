@@ -1,0 +1,56 @@
+
+<div fxLayout="row" fxLayoutAlign="center center">
+    <h4 class="space">Send Personal Notification</h4>
+  </div>
+
+
+  <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Student Name</mat-label>
+        <input matInput placeholder="Name" [matAutocomplete]="auto">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Student Name</mat-hint>
+      </mat-form-field>
+    
+
+      <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+        </mat-autocomplete>
+        
+    </div>
+
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Notification Title</mat-label>
+        <input matInput placeholder="Title">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Notification Title</mat-hint>
+      </mat-form-field>
+    
+    </div>
+    
+  
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Notification Detail</mat-label>
+        <textarea matInput placeholder="Notification Body" rows="9"></textarea>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Notification Detail</mat-hint>
+      </mat-form-field>
+    </div>
+  
+   
+   
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div>
+        <button mat-raised-button>Send</button>
+      </div>
+  
+      <div>
+        <button mat-raised-button class="clear">Cancel</button>
+      </div>
+    </div>
+    
+    
+    
+    

@@ -1,0 +1,55 @@
+
+<div fxLayout="row" fxLayoutAlign="center center">
+    <h4 class="space">Send Notification to Class</h4>
+  </div>
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Notification Title</mat-label>
+        <input matInput placeholder="Title">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Notification Title</mat-hint>
+      </mat-form-field>
+    
+    </div>
+    
+  
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Notification Detail</mat-label>
+        <textarea matInput placeholder="Notification Body" rows="9"></textarea>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Notification Detail</mat-hint>
+      </mat-form-field>
+    </div>
+   
+
+    <div class="example-container">
+        <mat-form-field>
+            <mat-select placeholder="Standard" multiple>
+              <mat-option *ngFor="let standard of StandardList" [value]="standard">{{standard}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+    </div>
+
+
+    <div class="example-container">
+        <mat-form-field>
+            <mat-select placeholder="Division" multiple>
+              <mat-option *ngFor="let division of DivisionList" [value]="division">{{division}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div>
+        <button mat-raised-button>Send</button>
+      </div>
+  
+      <div>
+        <button mat-raised-button class="clear">Cancel</button>
+      </div>
+    </div>
+    
+    
